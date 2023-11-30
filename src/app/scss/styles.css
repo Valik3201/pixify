@@ -127,7 +127,7 @@ body {
 .banner .banner__overlay .banner__content .banner__popular-searches .banner__search-list .banner__search-item {
   display: inline-block;
   font-weight: 600;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 3px;
   padding: 5px 10px;
   margin-right: 0.5rem;
@@ -135,5 +135,5 @@ body {
   transition: background-color 0.2s ease-in;
 }
 .banner .banner__overlay .banner__content .banner__popular-searches .banner__search-list .banner__search-item:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
 }/*# sourceMappingURL=styles.css.map */

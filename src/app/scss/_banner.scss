@@ -75,7 +75,7 @@
           .banner__search-item {
             display: inline-block;
             font-weight: 600;
-            background-color: rgba($color: $white, $alpha: 0.1);
+            background-color: rgba($color: $white, $alpha: 0.2);
             border-radius: 3px;
             padding: 5px 10px;
             margin-right: 0.5rem;
@@ -83,7 +83,7 @@
             transition: background-color 0.2s ease-in;
 
             &:hover {
-              background-color: rgba($color: $white, $alpha: 0.2);
+              background-color: rgba($color: $white, $alpha: 0.3);
             }
           }
         }
