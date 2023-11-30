@@ -20,7 +20,7 @@
     <a href="https://github.com/Valik3201/goit-js-hw-11"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Valik3201/goit-js-hw-11">View Demo</a>
+    <a href="https://valik3201.github.io/goit-js-hw-11/">View Demo</a>
     ·
     <a href="https://github.com/Valik3201/goit-js-hw-11/issues">Report Bug</a>
     ·
