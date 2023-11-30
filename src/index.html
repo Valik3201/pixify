@@ -3,7 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pixify</title>
+    <link rel="stylesheet" href="./app/scss/styles.css" />
+    <title>Pixify - Where Every Image Tells a Story</title>
   </head>
-  <body></body>
+
+  <body>
+    <header class="banner">
+      <div class="banner__overlay">
+        <div class="banner__content">
+          <div class="banner__logo">Pixify</div>
+          <h1 class="banner__title">Where every image tells a story</h1>
+          <p class="banner__subtitle">
+            Find millions of high-caliber photos to enhance your visual
+            storytelling
+          </p>
+          <form class="banner__search-form">
+            <input
+              type="text"
+              class="banner__search-input"
+              placeholder="Search images..."
+            />
+            <button type="submit" class="banner__search-button">Search</button>
+          </form>
+          <div class="banner__popular-searches">
+            <p class="banner__popular-title">Popular Searches:</p>
+            <ul class="banner__search-list">
+              <li class="banner__search-item">Christmas</li>
+              <li class="banner__search-item">Present</li>
+              <li class="banner__search-item">Nature</li>
+              <li class="banner__search-item">Travel</li>
+              <li class="banner__search-item">Technology</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
 </html>
