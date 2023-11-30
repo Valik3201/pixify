@@ -8,7 +8,7 @@
     <!--<img alt="logo" src="#" width="600">-->
   </picture>
     <h1>
-      HTTP Requests, REST API, CRUM, Pagination, and async/await
+      HTTP Requests, REST API, CRUD, Pagination, and async/await
     </h1>
   </div>
 </a>
