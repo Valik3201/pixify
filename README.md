@@ -7,9 +7,9 @@
   <picture>
     <!--<img alt="logo" src="#" width="600">-->
   </picture>
-    <h1>
+    <h2>
       HTTP Requests, REST API, CRUD, Pagination, and async/await
-    </h1>
+    </h2>
   </div>
 </a>
 
@@ -20,7 +20,7 @@
     <a href="https://github.com/Valik3201/goit-js-hw-11"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Valik3201/goit-js-hw-11">View Demo</a>
+    <a href="https://valik3201.github.io/goit-js-hw-11/">View Demo</a>
     ·
     <a href="https://github.com/Valik3201/goit-js-hw-11/issues">Report Bug</a>
     ·
@@ -129,7 +129,7 @@ Make sure you have the following installed:
 3. Install dependencies
    ```sh
     npm install
-    
+
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
 <!-- USAGE -->
