@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,900;9..40,1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&family=Inter:wght@400;500;600&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -20,7 +23,7 @@ button {
 }
 
 body {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .container {
@@ -57,8 +60,8 @@ body {
 
 .banner {
   position: relative;
-  height: 500px;
-  background-color: #336aea;
+  height: 600px;
+  background-image: url(https://img.freepik.com/free-photo/midtown-manhattan-new-york-city-usa_181624-9030.jpg?w=1800&t=st=1701387111~exp=1701387711~hmac=4d618ee021d091698d91c7bf3341f8aa76dbd666c7e7fa6b993baa2cc64e9423);
   background-size: cover;
   background-position: center;
 }
@@ -68,7 +71,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,14 +82,17 @@ body {
   color: #ffffff;
 }
 .banner .banner__overlay .banner__content .banner__logo {
-  font-size: 2em;
+  font-size: 4em;
   font-weight: 1000;
   text-transform: uppercase;
+  letter-spacing: 1.2;
+  font-family: "Archivo", sans-serif;
 }
 .banner .banner__overlay .banner__content .banner__title {
   font-size: 2.5em;
   margin-top: 10px;
   font-weight: 800;
+  font-family: "Archivo", sans-serif;
 }
 .banner .banner__overlay .banner__content .banner__subtitle {
   font-size: 1.2em;
@@ -107,11 +113,12 @@ body {
   cursor: pointer;
 }
 .banner .banner__overlay .banner__content .banner__popular-searches {
+  font-size: 0.8em;
+  gap: 0.625rem;
   margin-top: 20px;
 }
 .banner .banner__overlay .banner__content .banner__popular-searches .banner__popular-title {
   font-size: 1.2em;
-  margin-bottom: 5px;
 }
 .banner .banner__overlay .banner__content .banner__popular-searches .banner__search-list {
   list-style: none;
@@ -119,14 +126,14 @@ body {
 }
 .banner .banner__overlay .banner__content .banner__popular-searches .banner__search-list .banner__search-item {
   display: inline-block;
-  font-size: 0.8em;
-  font-weight: 500;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 5px;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
   padding: 5px 10px;
-  margin-right: 10px;
+  margin-right: 0.5rem;
   cursor: pointer;
+  transition: background-color 0.2s ease-in;
 }
 .banner .banner__overlay .banner__content .banner__popular-searches .banner__search-list .banner__search-item:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
 }/*# sourceMappingURL=styles.css.map */
