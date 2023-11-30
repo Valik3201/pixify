@@ -129,7 +129,7 @@ Make sure you have the following installed:
 3. Install dependencies
    ```sh
     npm install
-    
+
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
 <!-- USAGE -->
