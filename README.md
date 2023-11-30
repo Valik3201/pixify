@@ -7,9 +7,9 @@
   <picture>
     <!--<img alt="logo" src="#" width="600">-->
   </picture>
-    <h1>
+    <h2>
       HTTP Requests, REST API, CRUD, Pagination, and async/await
-    </h1>
+    </h2>
   </div>
 </a>
 
