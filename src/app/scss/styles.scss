@@ -1,0 +1,9 @@
+// Import global styles and variables first
+@import "_globals.scss";
+@import "_variables.scss";
+
+// Import mixins
+@import "_mixins.scss";
+
+// Import specific components or sections
+@import "_banner.scss";

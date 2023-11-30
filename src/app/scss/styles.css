@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,900;9..40,1000&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+.banner {
+  position: relative;
+  height: 500px;
+  background-color: #336aea;
+  background-size: cover;
+  background-position: center;
+}
+.banner .banner__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.banner .banner__overlay .banner__content {
+  text-align: center;
+  color: #ffffff;
+}
+.banner .banner__overlay .banner__content .banner__logo {
+  font-size: 2em;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+.banner .banner__overlay .banner__content .banner__title {
+  font-size: 2.5em;
+  margin-top: 10px;
+  font-weight: 800;
+}
+.banner .banner__overlay .banner__content .banner__subtitle {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+.banner .banner__overlay .banner__content .banner__search-form {
+  margin-top: 20px;
+}
+.banner .banner__overlay .banner__content .banner__search-form .banner__search-input {
+  padding: 10px;
+  width: 80%;
+}
+.banner .banner__overlay .banner__content .banner__search-form .banner__search-button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+}
+.banner .banner__overlay .banner__content .banner__popular-searches {
+  margin-top: 20px;
+}
+.banner .banner__overlay .banner__content .banner__popular-searches .banner__popular-title {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+.banner .banner__overlay .banner__content .banner__popular-searches .banner__search-list {
+  list-style: none;
+  padding: 0;
+}
+.banner .banner__overlay .banner__content .banner__popular-searches .banner__search-list .banner__search-item {
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.banner .banner__overlay .banner__content .banner__popular-searches .banner__search-list .banner__search-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,59 @@
+@import "mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+// Container
+
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include breakpoint-up(tablet) {
+    max-width: 80%;
+  }
+
+  @include breakpoint-up(desktop) {
+    max-width: 1158px;
+  }
+}
+
+// Flexbox
+
+.flex {
+  display: flex;
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-c {
+    justify-content: center;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+  &-column {
+    flex-direction: column;
+  }
+}

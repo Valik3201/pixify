@@ -1,0 +1,24 @@
+// Responsive Design
+$breakpoints-up: (
+  "desktop": 1200px,
+  "tablet": 768px,
+  "mobile": 480px,
+);
+
+$breakpoints-down: (
+  "desktop": 1199px,
+  "tablet": 767px,
+  "mobile": 479px,
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
