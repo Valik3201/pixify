@@ -1,0 +1,30 @@
+.footer {
+  background-color: $dark-shade;
+  color: $light-shade;
+  padding: 20px;
+  text-align: center;
+
+  .footer__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    .footer__logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: $main-brand-color;
+    }
+
+    .footer__description {
+      font-size: 1em;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .footer__copyright {
+      font-size: 0.8em;
+      margin-top: 10px;
+    }
+  }
+}

@@ -3,15 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./app/scss/styles.css" />
+    <link rel="icon" href="./app/assets/favicon.png" type="image/png" />
     <title>Pixify - Where every image tells a story</title>
+    <link rel="stylesheet" href="./app/scss/styles.css" />
   </head>
 
   <body>
     <header class="banner">
       <div class="banner__overlay">
         <div class="banner__content">
-          <div class="banner__logo">Pixify</div>
+          <div class="banner__logo">
+            <svg
+              width="300"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+            >
+              <use xlink:href="./app/assets/logo.svg#logo" />
+            </svg>
+          </div>
           <h1 class="banner__title">Where every image tells a story</h1>
           <p class="banner__subtitle">
             Find millions of high-caliber photos to enhance your visual
@@ -38,5 +47,23 @@
         </div>
       </div>
     </header>
+
+    <main></main>
+
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__logo">
+          <svg
+            width="100"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+          >
+            <use xlink:href="./app/assets/logo.svg#logo" />
+          </svg>
+        </div>
+        <p class="footer__description">Where every image tells a story</p>
+        <p class="footer__copyright">&copy; 2023 All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
