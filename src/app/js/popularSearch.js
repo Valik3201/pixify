@@ -17,8 +17,6 @@ const handleSearchListItemClick = async (event) => {
 
     searchInput.value = selectedQuery;
 
-    clearGallery();
-
     const totalHits = await searchAndRenderPixabayImages(selectedQuery);
 
     updateResultsInfo(selectedQuery, totalHits);
