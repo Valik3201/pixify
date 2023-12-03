@@ -14,11 +14,12 @@
 
   <body>
     <header class="banner">
-      <div class="banner__overlay">
-        <div class="banner__content">
+      <div class="banner__overlay flex flex-ai-c flex-jc-c">
+        <div class="banner__content container flex">
           <div class="banner__logo">
             <svg
               width="300"
+              height="62"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
             >
@@ -30,7 +31,7 @@
             Find millions of high-caliber photos to enhance your visual
             storytelling
           </p>
-          <form class="banner__search-form" id="search-form">
+          <form class="banner__search-form flex flex-jc-c" id="search-form">
             <input
               type="text"
               class="banner__search-input"
@@ -38,14 +39,14 @@
               autocomplete="off"
               placeholder="Search images..."
             />
-            <button type="submit" class="banner__search-button">
+            <button type="submit" class="banner__search-button flex flex-ai-c">
               <i class="fa-solid fa-magnifying-glass"></i>
               Search
             </button>
           </form>
           <div class="banner__popular-searches flex flex-jc-c flex-ai-c">
             <p class="banner__popular-title">Popular Searches:</p>
-            <ul class="banner__search-list">
+            <ul class="banner__search-list flex">
               <li class="banner__search-item">
                 <i class="fa-solid fa-magnifying-glass"></i>Christmas
               </li>
@@ -68,9 +69,9 @@
     </header>
 
     <main class="gallery">
-      <div class="gallery__results-text"></div>
-      <div class="gallery__total-hits"></div>
-      <div class="gallery__container" id="gallery-container"></div>
+      <div class="gallery__results-text container"></div>
+      <div class="gallery__total-hits flex flex-ai-c flex-jc-c"></div>
+      <div class="gallery__container container" id="gallery-container"></div>
       <button type="button" class="gallery__load-more-btn">Load more</button>
     </main>
 
@@ -79,6 +80,7 @@
         <div class="footer__logo">
           <svg
             width="100"
+            height="25"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
           >

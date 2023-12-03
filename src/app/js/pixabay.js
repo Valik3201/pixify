@@ -36,9 +36,9 @@ export const searchPixabayImages = async (query, page, perPage) => {
 export const renderPixabayImages = (hits, container) => {
   const markup = hits
     .map(({ id, webformatURL, likes, views, comments, downloads }) => {
-      return `<div class="gallery__item">
+      return `<div class="gallery__item flex">
           <img src="${webformatURL}" alt="Pixabay Image ${id}" loading="lazy" class="gallery__image" />
-          <div class="gallery__info">
+          <div class="gallery__info flex flex-jc-sb">
             <p class="gallery__stat"><i class="fas fa-heart" aria-label="Likes"></i>${likes.toLocaleString()}</p>
             <p class="gallery__stat"><i class="fas fa-comment" aria-label="Comments"></i>${comments.toLocaleString()}</p>
             <p class="gallery__stat"><i class="fas fa-eye" aria-label="Views"></i>${views.toLocaleString()}</p>

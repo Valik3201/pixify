@@ -1,15 +1,36 @@
 .footer {
   background-color: $dark-shade;
   color: $light-shade;
-  padding: 20px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   text-align: center;
 
   .footer__content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
     align-items: center;
     justify-content: center;
+
+    @include breakpoint-up(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-up(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    & > :nth-child(3) {
+      @include breakpoint-up(tablet) {
+        grid-column: span 2;
+        text-align: center;
+      }
+
+      @include breakpoint-up(desktop) {
+        grid-column: auto;
+      }
+    }
+
     .footer__logo {
       font-size: 1.5em;
       font-weight: bold;

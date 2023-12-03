@@ -18,9 +18,7 @@
   }
 
   &__total-hits {
-    display: flex;
     gap: 0.5rem;
-    align-items: center;
     width: fit-content;
     color: $black;
     font-size: 1em;
@@ -41,8 +39,6 @@
     grid-gap: 20px;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
 
     @include breakpoint-up(tablet) {
       grid-template-columns: repeat(2, 1fr);
@@ -53,21 +49,19 @@
     }
 
     .gallery__item {
-      display: flex;
       flex-direction: column;
       background-color: #fff;
       overflow: hidden;
       position: relative;
+      border-radius: 3px;
 
       .gallery__image {
-        width: 400px;
+        width: 100%;
         height: 300px;
         object-fit: cover;
       }
 
       .gallery__info {
-        display: flex;
-        justify-content: space-between;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -135,9 +129,18 @@
     padding: 10px 20px;
     font-size: 1em;
     background-color: $main-brand-color;
+    transition: background-color 0.2s ease-in;
     color: $white;
     border-radius: 3px;
     border: none;
     cursor: pointer;
+
+    &:hover {
+      background-color: darken($color: $main-brand-color, $amount: 5);
+    }
+
+    &:active {
+      background-color: darken($color: $main-brand-color, $amount: 10);
+    }
   }
 }

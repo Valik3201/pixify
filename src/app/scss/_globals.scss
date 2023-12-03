@@ -29,15 +29,15 @@ body {
 
 .container {
   min-width: 320px;
+  max-width: 90%;
   margin: 0 auto;
-  padding: 0 15px;
 
   @include breakpoint-up(tablet) {
     max-width: 80%;
   }
 
   @include breakpoint-up(desktop) {
-    max-width: 1158px;
+    max-width: 1200px;
   }
 }
 
