@@ -1,6 +1,7 @@
 import { searchPixabayImages, renderPixabayImages } from "./pixabay.js";
 
 import {
+  searchInput,
   galleryContainer,
   resultsText,
   totalHitsElement,
@@ -9,6 +10,10 @@ import {
   page,
   incrementPage,
 } from "./variables.js";
+
+export const getSearchQuery = () => {
+  return searchInput.value.trim();
+};
 
 export const updateResultsInfo = (query, totalHits) => {
   resultsText.insertAdjacentHTML(

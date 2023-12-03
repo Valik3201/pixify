@@ -1,19 +1,11 @@
-import {
-  searchForm,
-  searchInput,
-  loadMoreButton,
-  resetPage,
-} from "./variables.js";
+import { searchForm, resetPage } from "./variables.js";
 
 import {
+  getSearchQuery,
   updateResultsInfo,
   searchAndRenderPixabayImages,
   clearGallery,
 } from "./searchService.js";
-
-const getSearchQuery = () => {
-  return searchInput.value.trim();
-};
 
 const handleSearchFormSubmit = async (event) => {
   event.preventDefault();
@@ -28,12 +20,4 @@ const handleSearchFormSubmit = async (event) => {
   }
 };
 
-const handleLoadMoreButtonClick = async () => {
-  const searchQuery = getSearchQuery();
-  if (searchQuery !== "") {
-    await searchAndRenderPixabayImages(searchQuery);
-  }
-};
-
 searchForm.addEventListener("submit", handleSearchFormSubmit);
-loadMoreButton.addEventListener("click", handleLoadMoreButtonClick);
