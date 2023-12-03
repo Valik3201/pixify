@@ -5,7 +5,7 @@
   <div align="center"> 
   <br>
   <picture>
-    <img alt="logo" src="https://github.com/Valik3201/goit-js-hw-11/blob/main/src/app/assets/logo.svg" width="600"
+    <img alt="logo" src="https://github.com/Valik3201/goit-js-hw-11/blob/main/src/app/assets/logo.svg" width="400" style="margin:0; padding:0"
   </picture>
     <h2>
       HTTP Requests, REST API, CRUD, Pagination, and async/await
