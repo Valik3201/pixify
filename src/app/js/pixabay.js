@@ -49,4 +49,12 @@ export const renderPixabayImages = (hits, container) => {
     .join("");
 
   container.insertAdjacentHTML("beforeend", markup);
+
+  const { height: cardHeight } =
+    container.firstElementChild.getBoundingClientRect();
+
+  window.scrollBy({
+    top: cardHeight,
+    behavior: "smooth",
+  });
 };
