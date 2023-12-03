@@ -1,89 +1,39 @@
-import { searchPixabayImages, renderPixabayImages } from "./pixabay.js";
-
 import {
   searchForm,
   searchInput,
-  galleryContainer,
-  resultsText,
-  totalHitsElement,
   loadMoreButton,
-  perPage,
-  page,
-  incrementPage,
   resetPage,
 } from "./variables.js";
 
-import { clearGallery } from "./searchService.js";
+import {
+  updateResultsInfo,
+  searchAndRenderPixabayImages,
+  clearGallery,
+} from "./searchService.js";
 
 const getSearchQuery = () => {
   return searchInput.value.trim();
 };
 
-searchForm.addEventListener("submit", async (event) => {
+const handleSearchFormSubmit = async (event) => {
   event.preventDefault();
-
   resetPage();
-
   clearGallery();
 
   const searchQuery = getSearchQuery();
-
   if (searchQuery !== "") {
-    try {
-      const { totalHits, hits } = await searchPixabayImages(
-        searchQuery,
-        page,
-        perPage
-      );
+    const totalHits = await searchAndRenderPixabayImages(searchQuery);
 
-      resultsText.insertAdjacentHTML(
-        "beforeend",
-        `Showing results for <span class="gallery__search-query">${searchQuery}</span>`
-      );
-
-      totalHitsElement.insertAdjacentHTML(
-        "beforeend",
-        `<i class="fa-solid fa-images"></i>Images <span class="gallery__total-hits__count">${totalHits.toLocaleString()}</span>`
-      );
-
-      renderPixabayImages(hits, galleryContainer);
-
-      loadMoreButton.style.display = hits.length >= perPage ? "block" : "none";
-
-      if (hits.length < perPage) {
-        loadMoreButton.style.display = "none";
-        alert("We're sorry, but you've reached the end of search results.");
-      }
-
-      incrementPage();
-    } catch (error) {
-      console.error(error);
-    }
+    updateResultsInfo(searchQuery, totalHits);
   }
-});
+};
 
-loadMoreButton.addEventListener("click", async () => {
+const handleLoadMoreButtonClick = async () => {
   const searchQuery = getSearchQuery();
   if (searchQuery !== "") {
-    try {
-      const { totalHits, hits } = await searchPixabayImages(
-        searchQuery,
-        page,
-        perPage
-      );
-
-      renderPixabayImages(hits, galleryContainer);
-
-      loadMoreButton.style.display = hits.length >= perPage ? "block" : "none";
-
-      if (hits.length < perPage) {
-        loadMoreButton.style.display = "none";
-        alert("We're sorry, but you've reached the end of search results.");
-      }
-
-      incrementPage();
-    } catch (error) {
-      console.error(error);
-    }
+    await searchAndRenderPixabayImages(searchQuery);
   }
-});
+};
+
+searchForm.addEventListener("submit", handleSearchFormSubmit);
+loadMoreButton.addEventListener("click", handleLoadMoreButtonClick);
