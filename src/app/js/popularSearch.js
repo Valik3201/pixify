@@ -15,8 +15,6 @@ import {
 
 import { clearGallery } from "./searchService.js";
 
-let page = 1;
-
 searchList.addEventListener("click", async (event) => {
   // Проверяем, был ли клик на элементе списка
 
