@@ -11,11 +11,35 @@ import {
   incrementPage,
 } from "./variables.js";
 
+import { Notify } from "notiflix/build/notiflix-notify-aio";
+import { Loading } from "notiflix/build/notiflix-loading-aio";
+
+Notify.init({
+  fontSize: "1rem",
+  width: "550px",
+  cssAnimationStyle: "from-bottom",
+  useIcon: false,
+  success: {
+    background: "#17d0c6",
+  },
+  info: {
+    background: "#336aea",
+  },
+});
+
+Loading.init({
+  svgColor: "#336aea",
+});
+
 export const getSearchQuery = () => {
   return searchInput.value.trim();
 };
 
 export const updateResultsInfo = (query, totalHits) => {
+  if (totalHits !== 0) {
+    Notify.success(`Hooray! We found ${totalHits} images.`);
+  }
+
   resultsText.insertAdjacentHTML(
     "beforeend",
     `Showing results for <span class="gallery__search-query">${query}</span>`
@@ -29,6 +53,8 @@ export const updateResultsInfo = (query, totalHits) => {
 
 export const searchAndRenderPixabayImages = async (query) => {
   try {
+    Loading.dots();
+
     const { totalHits, hits } = await searchPixabayImages(query, page, perPage);
 
     renderPixabayImages(hits, galleryContainer);
@@ -37,13 +63,19 @@ export const searchAndRenderPixabayImages = async (query) => {
 
     incrementPage();
 
-    if (hits.length < perPage) {
+    if (hits.length === 0) {
+      Notify.info(
+        "Sorry, there are no images matching your search query. Please try again."
+      );
+    } else if (hits.length < perPage) {
       loadMoreButton.style.display = "none";
-      alert("We're sorry, but you've reached the end of search results.");
+      Notify.info("We're sorry, but you've reached the end of search results.");
     }
+
+    Loading.remove();
     return totalHits;
   } catch (error) {
-    console.error("Error fetching Pixabay data:", error);
+    Notify.failure("Error fetching Pixabay data:", error);
     return 0;
   }
 };
