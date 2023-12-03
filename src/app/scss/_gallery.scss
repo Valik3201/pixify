@@ -1,0 +1,143 @@
+@import "mixins";
+@import "variables";
+
+.gallery {
+  &__results-text {
+    text-align: center;
+    font-family: $base-family;
+    color: $light-gray;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+
+    .gallery__search-query {
+      color: $black;
+      font-weight: 700;
+    }
+  }
+
+  &__total-hits {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: fit-content;
+    color: $black;
+    font-size: 1em;
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 0 1rem 1rem;
+    border-bottom: 2px solid $black;
+
+    &__count {
+      color: $light-gray;
+      font-weight: 400;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include breakpoint-up(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-up(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery__item {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      overflow: hidden;
+      position: relative;
+
+      .gallery__image {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .gallery__info {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        background-image: linear-gradient(
+          180deg,
+          #00000057 0,
+          rgba(0, 0, 0, 0.338) 3.5%,
+          rgba(0, 0, 0, 0.324) 7%,
+          rgba(0, 0, 0, 0.306) 10.35%,
+          rgba(0, 0, 0, 0.285) 13.85%,
+          rgba(0, 0, 0, 0.262) 17.35%,
+          rgba(0, 0, 0, 0.237) 20.85%,
+          rgba(0, 0, 0, 0.213) 24.35%,
+          rgba(0, 0, 0, 0.188) 27.85%,
+          rgba(0, 0, 0, 0.165) 31.35%,
+          rgba(0, 0, 0, 0.144) 34.85%,
+          rgba(0, 0, 0, 0.126) 38.35%,
+          rgba(0, 0, 0, 0.112) 41.85%,
+          rgba(0, 0, 0, 0.103) 45.35%,
+          #0000001a 48.85%,
+          rgba(0, 0, 0, 0.103) 52.35%,
+          rgba(0, 0, 0, 0.112) 55.85%,
+          rgba(0, 0, 0, 0.126) 59.35%,
+          rgba(0, 0, 0, 0.144) 62.85%,
+          rgba(0, 0, 0, 0.165) 66.35%,
+          rgba(0, 0, 0, 0.188) 69.85%,
+          rgba(0, 0, 0, 0.213) 73.35%,
+          rgba(0, 0, 0, 0.237) 76.85%,
+          rgba(0, 0, 0, 0.262) 80.35%,
+          rgba(0, 0, 0, 0.285) 83.85%,
+          rgba(0, 0, 0, 0.306) 87.35%,
+          rgba(0, 0, 0, 0.324) 90.85%,
+          rgba(0, 0, 0, 0.338) 94.35%,
+          rgba(0, 0, 0, 0.347) 97.85%,
+          #00000059
+        );
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+        padding: 2rem;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        .gallery__stat {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: end;
+          gap: 1rem;
+          font-size: 1em;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &__load-more-btn {
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: $main-brand-color;
+    color: $white;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+  }
+}

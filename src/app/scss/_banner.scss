@@ -61,7 +61,9 @@
         margin-top: 20px;
 
         .banner__popular-title {
-          font-size: 1.2em;
+          font-family: $title-family;
+          letter-spacing: 0.07em;
+          font-size: 1em;
         }
 
         .banner__search-list {
