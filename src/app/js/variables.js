@@ -7,7 +7,7 @@ export const resultsText = document.querySelector(".gallery__results-text");
 export const totalHitsElement = document.querySelector(".gallery__total-hits");
 
 export let page = 1;
-export let perPage = 9; // 40
+export let perPage = 40;
 
 export function incrementPage() {
   page += 1;
