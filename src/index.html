@@ -6,6 +6,10 @@
     <link rel="icon" href="./app/assets/favicon.png" type="image/png" />
     <title>Pixify - Where every image tells a story</title>
     <link rel="stylesheet" href="./app/scss/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/6ec9017490.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -26,29 +30,49 @@
             Find millions of high-caliber photos to enhance your visual
             storytelling
           </p>
-          <form class="banner__search-form">
+          <form class="banner__search-form" id="search-form">
             <input
               type="text"
               class="banner__search-input"
+              name="searchQuery"
+              autocomplete="off"
               placeholder="Search images..."
             />
-            <button type="submit" class="banner__search-button">Search</button>
+            <button type="submit" class="banner__search-button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              Search
+            </button>
           </form>
           <div class="banner__popular-searches flex flex-jc-c flex-ai-c">
             <p class="banner__popular-title">Popular Searches:</p>
             <ul class="banner__search-list">
-              <li class="banner__search-item">Christmas</li>
-              <li class="banner__search-item">Present</li>
-              <li class="banner__search-item">Nature</li>
-              <li class="banner__search-item">Travel</li>
-              <li class="banner__search-item">Technology</li>
+              <li class="banner__search-item">
+                <i class="fa-solid fa-magnifying-glass"></i>Christmas
+              </li>
+              <li class="banner__search-item">
+                <i class="fa-solid fa-magnifying-glass"></i>Present
+              </li>
+              <li class="banner__search-item">
+                <i class="fa-solid fa-magnifying-glass"></i>Nature
+              </li>
+              <li class="banner__search-item">
+                <i class="fa-solid fa-magnifying-glass"></i>Travel
+              </li>
+              <li class="banner__search-item">
+                <i class="fa-solid fa-magnifying-glass"></i>Technology
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </header>
 
-    <main></main>
+    <main class="gallery">
+      <div class="gallery__results-text"></div>
+      <div class="gallery__total-hits"></div>
+      <div class="gallery__container" id="gallery-container"></div>
+      <button type="button" class="gallery__load-more-btn">Load more</button>
+    </main>
 
     <footer class="footer">
       <div class="footer__content">
@@ -65,5 +89,7 @@
         <p class="footer__copyright">&copy; 2023 All rights reserved.</p>
       </div>
     </footer>
+
+    <script type="module" src="./app/js/main.js"></script>
   </body>
 </html>
