@@ -73,9 +73,26 @@ export const searchAndRenderPixabayImages = async (query) => {
     }
 
     Loading.remove();
+
+    if (galleryContainer && galleryContainer.firstElementChild) {
+      const { height: cardHeight } =
+        galleryContainer.firstElementChild.getBoundingClientRect();
+
+      window.scrollBy({
+        top: cardHeight,
+        behavior: "smooth",
+      });
+    } else {
+      console.warn("Gallery container is not found or is empty.");
+    }
+
     return totalHits;
   } catch (error) {
-    Notify.failure("Error fetching Pixabay data:", error);
+    console.error("Error fetching Pixabay data:", error);
+    Notify.failure(
+      "Error fetching Pixabay data: " + (error.message || "Unknown error")
+    );
+    Loading.remove();
     return 0;
   }
 };
