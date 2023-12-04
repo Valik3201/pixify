@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Metadata for character set and responsive design -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Theme color for browser UI -->
     <meta name="theme-color" content="#336aea" />
+    <!-- Favicon link -->
     <link rel="icon" href="./app/assets/favicon.png" type="image/png" />
+    <!-- Page title -->
     <title>Pixify - Where every image tells a story</title>
+    <!-- Stylesheet link -->
     <link rel="stylesheet" href="./app/scss/styles.css" />
+    <!-- Font Awesome script for icons -->
     <script
       src="https://kit.fontawesome.com/6ec9017490.js"
       crossorigin="anonymous"
@@ -14,10 +20,12 @@
   </head>
 
   <body>
+    <!-- Header section with banner and navigation -->
     <header class="banner">
       <div class="banner__overlay flex flex-ai-c flex-jc-c">
         <div class="banner__content container flex">
           <div class="banner__logo">
+            <!-- Pixify logo using SVG -->
             <svg
               width="300"
               height="62"
@@ -27,11 +35,13 @@
               <use xlink:href="./app/assets/logo.svg#logo" />
             </svg>
           </div>
+          <!-- Page title and subtitle -->
           <h1 class="banner__title">Where every image tells a story</h1>
           <p class="banner__subtitle">
             Find millions of high-caliber photos to enhance your visual
             storytelling
           </p>
+          <!-- Search form -->
           <form class="banner__search-form flex flex-jc-c" id="search-form">
             <input
               type="text"
@@ -45,6 +55,7 @@
               Search
             </button>
           </form>
+          <!-- Popular searches list -->
           <div class="banner__popular-searches flex flex-jc-c flex-ai-c">
             <p class="banner__popular-title">Popular Searches:</p>
             <ul class="banner__search-list flex">
@@ -69,15 +80,21 @@
       </div>
     </header>
 
+    <!-- Main content section with image gallery -->
     <main class="gallery">
+      <!-- Results text and total hits display -->
       <div class="gallery__results-text container"></div>
       <div class="gallery__total-hits flex flex-ai-c flex-jc-c"></div>
+      <!-- Image gallery container -->
       <div class="gallery__container container" id="gallery-container"></div>
+      <!-- Load more button -->
       <button type="button" class="gallery__load-more-btn">Load more</button>
     </main>
 
+    <!-- Footer section -->
     <footer class="footer">
       <div class="footer__content">
+        <!-- Footer logo -->
         <div class="footer__logo">
           <svg
             width="100"
@@ -88,11 +105,13 @@
             <use xlink:href="./app/assets/logo.svg#logo" />
           </svg>
         </div>
+        <!-- Footer description and copyright -->
         <p class="footer__description">Where every image tells a story</p>
         <p class="footer__copyright">&copy; 2023 All rights reserved.</p>
       </div>
     </footer>
 
+    <!-- JavaScript script for page functionality -->
     <script type="module" src="./app/js/main.js"></script>
   </body>
 </html>
