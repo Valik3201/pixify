@@ -1,4 +1,4 @@
-// Responsive Design
+// Define breakpoints for media queries
 $breakpoints-up: (
   "desktop": 1200px,
   "tablet": 768px,
@@ -11,14 +11,16 @@ $breakpoints-down: (
   "mobile": 479px,
 );
 
+// Define mixin for media query with a minimum width
 @mixin breakpoint-up($size) {
   @media (min-width: map-get($breakpoints-up, $size)) {
-    @content;
+    @content; // Content inside the mixin will be included in the media query
   }
 }
 
+// Define mixin for media query with a maximum width
 @mixin breakpoint-down($size) {
   @media (max-width: map-get($breakpoints-down, $size)) {
-    @content;
+    @content; // Content inside the mixin will be included in the media query
   }
 }

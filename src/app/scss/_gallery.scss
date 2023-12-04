@@ -1,7 +1,10 @@
-@import "mixins";
-@import "variables";
+// Import shared variables and mixins
+@import "mixins"; // Shared SCSS mixins
+@import "variables"; // Shared SCSS variables
 
+// Gallery styles
 .gallery {
+  // Results text styles
   &__results-text {
     text-align: center;
     font-family: $base-family;
@@ -11,12 +14,14 @@
     margin-top: 4rem;
     margin-bottom: 2rem;
 
+    // Search query styles within results text
     .gallery__search-query {
       color: $black;
       font-weight: 700;
     }
   }
 
+  // Total hits styles
   &__total-hits {
     gap: 0.5rem;
     width: fit-content;
@@ -27,12 +32,14 @@
     padding: 0 1rem 1rem;
     border-bottom: 2px solid $black;
 
+    // Count styles within total hits
     &__count {
       color: $light-gray;
       font-weight: 400;
     }
   }
 
+  // Gallery container styles
   &__container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -40,6 +47,7 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
 
+    // Responsive grid layout using mixins
     @include breakpoint-up(tablet) {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -48,6 +56,7 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
+    // Gallery item styles
     .gallery__item {
       flex-direction: column;
       background-color: #fff;
@@ -55,10 +64,12 @@
       position: relative;
       border-radius: 3px;
 
+      // Gallery link styles
       .gallery__link {
         height: 300px;
       }
 
+      // Gallery image styles
       .gallery__image {
         width: 100%;
         height: 300px;
@@ -66,11 +77,13 @@
         filter: blur(5px);
         transition: filter 400ms;
 
+        // Lazyloaded image state
         &.lazyloaded {
           filter: blur(0);
         }
       }
 
+      // Gallery info styles
       .gallery__info {
         position: absolute;
         top: 50%;
@@ -110,15 +123,17 @@
           rgba(0, 0, 0, 0.338) 94.35%,
           rgba(0, 0, 0, 0.347) 97.85%,
           #00000059
-        );
+        ); // Gradient styles
         opacity: 0;
         transition: opacity 0.2s ease-in;
         padding: 2rem;
 
+        // Hover state for gallery info
         &:hover {
           opacity: 1;
         }
 
+        // Gallery stat styles
         .gallery__stat {
           display: flex;
           flex-direction: column;
@@ -132,6 +147,7 @@
     }
   }
 
+  // Load more button styles
   &__load-more-btn {
     margin: 0 auto;
     margin-top: 2rem;
@@ -145,6 +161,7 @@
     border: none;
     cursor: pointer;
 
+    // Hover and active states for load more button
     &:hover {
       background-color: darken($color: $main-brand-color, $amount: 5);
     }

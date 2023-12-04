@@ -1,10 +1,13 @@
-@import "variables";
-@import "mixins";
+// Import shared variables and mixins
+@import "variables"; // Shared SCSS variables
+@import "mixins"; // Shared SCSS mixins
 
+// Apply box-sizing to all elements
 * {
   box-sizing: border-box;
 }
 
+// Reset default margins and paddings for certain elements
 html,
 body,
 div,
@@ -21,17 +24,18 @@ button {
   padding: 0;
 }
 
+// Set base font family for the entire body
 body {
   font-family: $base-family;
 }
 
-// Container
-
+// Container styles
 .container {
   min-width: 320px;
   max-width: 90%;
   margin: 0 auto;
 
+  // Responsive container width using mixins
   @include breakpoint-up(tablet) {
     max-width: 80%;
   }
@@ -41,8 +45,7 @@ body {
   }
 }
 
-// Flexbox
-
+// Flexbox utility styles
 .flex {
   display: flex;
   &-jc-sb {

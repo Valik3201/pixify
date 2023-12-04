@@ -1,10 +1,12 @@
+// Footer styles
 .footer {
-  background-color: $dark-shade;
-  color: $light-shade;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  text-align: center;
+  background-color: $dark-shade; // Background color of the footer
+  color: $light-shade; // Text color of the footer
+  padding-top: 4rem; // Top padding of the footer
+  padding-bottom: 4rem; // Bottom padding of the footer
+  text-align: center; // Center-align text within the footer
 
+  // Footer content styles
   .footer__content {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -12,6 +14,7 @@
     align-items: center;
     justify-content: center;
 
+    // Responsive grid layout using mixins
     @include breakpoint-up(tablet) {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -20,32 +23,36 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
+    // Styles for the third child of footer content
     & > :nth-child(3) {
       @include breakpoint-up(tablet) {
-        grid-column: span 2;
-        text-align: center;
+        grid-column: span 2; // Span two columns on tablets
+        text-align: center; // Center-align text on tablets
       }
 
       @include breakpoint-up(desktop) {
-        grid-column: auto;
+        grid-column: auto; // Auto layout on desktop
       }
     }
 
+    // Footer logo styles
     .footer__logo {
-      font-size: 1.5em;
-      font-weight: bold;
-      color: $main-brand-color;
+      font-size: 1.5em; // Font size of the footer logo
+      font-weight: bold; // Bold font weight for the logo
+      color: $main-brand-color; // Main brand color for the logo
     }
 
+    // Footer description styles
     .footer__description {
-      font-size: 1em;
-      margin-left: 10px;
-      margin-right: 10px;
+      font-size: 1em; // Font size of the footer description
+      margin-left: 10px; // Left margin for the description
+      margin-right: 10px; // Right margin for the description
     }
 
+    // Footer copyright styles
     .footer__copyright {
-      font-size: 0.8em;
-      margin-top: 10px;
+      font-size: 0.8em; // Font size of the copyright text
+      margin-top: 10px; // Top margin for the copyright text
     }
   }
 }

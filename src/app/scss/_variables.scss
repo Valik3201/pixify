@@ -3,8 +3,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&family=Inter:wght@400;500;600;800&display=swap");
 
-$title-family: "Archivo", sans-serif;
-$base-family: "Inter", sans-serif;
+$title-family: "Archivo", sans-serif; // Font family for titles
+$base-family: "Inter", sans-serif; // Base font family
 
 // Light shades
 $light-shade: #d8d8d8; // ALTO
@@ -22,8 +22,8 @@ $dark-accent: #22244e; // PORT GORE
 $dark-shade: #121212; // COD GRAY
 
 // Additional colors
-$white: #ffffff;
-$black: #000000;
-$light-gray: #777;
-$dark-gray: #424242;
-$green: #17d0c6;
+$white: #ffffff; // White color
+$black: #000000; // Black color
+$light-gray: #777; // Light gray color
+$dark-gray: #424242; // Dark gray color
+$green: #17d0c6; // Green color

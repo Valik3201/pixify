@@ -1,14 +1,16 @@
-@import "variables";
-@import "mixins";
+// Import shared variables and mixins
+@import "variables"; // Shared SCSS variables
+@import "mixins"; // Shared SCSS mixins
 
+// Banner styles
 .banner {
   position: relative;
   height: 600px;
-  //   background-color: $main-brand-color;
   background-image: url("../assets/bg-image-new-york.jpg");
   background-size: cover;
   background-position: center;
 
+  // Banner overlay styles
   .banner__overlay {
     position: absolute;
     top: 0;
@@ -18,6 +20,7 @@
     background-color: rgba($color: $black, $alpha: 0.5);
     flex-direction: column;
 
+    // Banner content styles
     .banner__content {
       flex-direction: column;
       gap: 1.5rem;
@@ -25,10 +28,12 @@
       text-align: center;
       color: $white;
 
+      // Banner logo styles
       .banner__logo svg {
         fill: $white;
       }
 
+      // Banner title styles
       .banner__title {
         font-size: 1.4em;
         font-weight: 800;
@@ -43,13 +48,16 @@
         }
       }
 
+      // Banner subtitle styles
       .banner__subtitle {
         font-size: 1em;
       }
 
+      // Banner search form styles
       .banner__search-form {
         gap: 0.5rem;
 
+        // Search input styles
         .banner__search-input {
           font-size: 0.8em;
           padding: 10px;
@@ -62,6 +70,7 @@
           }
         }
 
+        // Search button styles
         .banner__search-button {
           gap: 0.25rem;
           padding: 10px 20px;
@@ -74,6 +83,7 @@
           transition: background-color 0.2s ease-in;
           cursor: pointer;
 
+          // Hover and active states
           &:hover {
             background-color: darken($color: $main-brand-color, $amount: 5);
           }
@@ -84,10 +94,12 @@
         }
       }
 
+      // Popular searches styles
       .banner__popular-searches {
         gap: 0.625rem;
         font-size: 0.8em;
 
+        // Popular searches title styles
         .banner__popular-title {
           font-family: $title-family;
           letter-spacing: 0.07em;
@@ -99,12 +111,14 @@
           }
         }
 
+        // Popular searches list styles
         .banner__search-list {
           list-style: none;
           padding: 0;
           flex-wrap: wrap;
           gap: 0.5rem;
 
+          // Popular search item styles
           .banner__search-item {
             display: inline-flex;
             gap: 0.25rem;
@@ -116,6 +130,7 @@
             cursor: pointer;
             transition: background-color 0.2s ease-in;
 
+            // Hover state
             &:hover {
               background-color: rgba($color: $white, $alpha: 0.3);
             }

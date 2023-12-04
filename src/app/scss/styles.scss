@@ -1,14 +1,15 @@
+// Import Normalize.css to reset browser styles
 @import "../../../node_modules/normalize-scss/sass/normalize";
 @include normalize();
 
 // Import global styles and variables first
-@import "globals";
-@import "variables";
+@import "globals"; // Global styles such as body, typography, etc.
+@import "variables"; // SCSS variables for colors, fonts, etc.
 
 // Import mixins
-@import "mixins";
+@import "mixins"; // Reusable SCSS mixins for common styles
 
 // Import specific components or sections
-@import "banner";
-@import "gallery";
-@import "footer";
+@import "banner"; // Styles for the banner component
+@import "gallery"; // Styles for the gallery component
+@import "footer"; // Styles for the footer component
