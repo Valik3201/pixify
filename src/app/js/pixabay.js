@@ -1,6 +1,7 @@
-// pixabay.js
-
 import axios from "axios";
+
+import "lazysizes";
+import "lazysizes/plugins/attrchange/ls.attrchange";
 
 const API_KEY = "41006597-e52c63fe5093395ccafd50f48";
 const API_URL = "https://pixabay.com/api/";
@@ -35,9 +36,9 @@ export const searchPixabayImages = async (query, page, perPage) => {
 
 export const renderPixabayImages = (hits, container) => {
   const markup = hits
-    .map(({ id, webformatURL, likes, views, comments, downloads }) => {
+    .map(({ id, webformatURL, tags, likes, views, comments, downloads }) => {
       return `<div class="gallery__item flex">
-          <img src="${webformatURL}" alt="Pixabay Image ${id}" loading="lazy" class="gallery__image" />
+          <img data-src="${webformatURL}" alt="Pixabay Image id:${id}, tags: ${tags}" class="gallery__image lazyload" />
           <div class="gallery__info flex flex-jc-sb">
             <p class="gallery__stat"><i class="fas fa-heart" aria-label="Likes"></i>${likes.toLocaleString()}</p>
             <p class="gallery__stat"><i class="fas fa-comment" aria-label="Comments"></i>${comments.toLocaleString()}</p>
