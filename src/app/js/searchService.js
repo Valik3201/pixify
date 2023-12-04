@@ -67,7 +67,7 @@ export const searchAndRenderPixabayImages = async (query) => {
       Notify.info(
         "Sorry, there are no images matching your search query. Please try again."
       );
-    } else if (hits.length < perPage) {
+    } else if (hits.length < perPage && page !== 1) {
       loadMoreButton.style.display = "none";
       Notify.info("We're sorry, but you've reached the end of search results.");
     }
