@@ -1,7 +1,5 @@
 import axios from "axios";
-
-import "lazysizes";
-import "lazysizes/plugins/attrchange/ls.attrchange";
+import { gallery } from "./gallery.js";
 
 const API_KEY = "41006597-e52c63fe5093395ccafd50f48";
 const API_URL = "https://pixabay.com/api/";
@@ -36,18 +34,32 @@ export const searchPixabayImages = async (query, page, perPage) => {
 
 export const renderPixabayImages = (hits, container) => {
   const markup = hits
-    .map(({ id, webformatURL, tags, likes, views, comments, downloads }) => {
-      return `<div class="gallery__item flex">
-          <img data-src="${webformatURL}" alt="Pixabay Image id:${id}, tags: ${tags}" class="gallery__image lazyload" />
-          <div class="gallery__info flex flex-jc-sb">
-            <p class="gallery__stat"><i class="fas fa-heart" aria-label="Likes"></i>${likes.toLocaleString()}</p>
-            <p class="gallery__stat"><i class="fas fa-comment" aria-label="Comments"></i>${comments.toLocaleString()}</p>
-            <p class="gallery__stat"><i class="fas fa-eye" aria-label="Views"></i>${views.toLocaleString()}</p>
-            <p class="gallery__stat"><i class="fas fa-download" aria-label="Downloads"></i>${downloads.toLocaleString()}</p>          
-          </div>
+    .map(
+      ({
+        webformatURL,
+        largeImageURL,
+        tags,
+        likes,
+        views,
+        comments,
+        downloads,
+      }) => {
+        return `<div class="gallery__item flex">
+          <a class="gallery__link" href="${largeImageURL}">
+            <img data-src="${webformatURL}" alt="${tags}" class="gallery__image lazyload" />
+            <div class="gallery__info flex flex-jc-sb">
+              <p class="gallery__stat"><i class="fas fa-heart" aria-label="Likes"></i>${likes.toLocaleString()}</p>
+              <p class="gallery__stat"><i class="fas fa-comment" aria-label="Comments"></i>${comments.toLocaleString()}</p>
+              <p class="gallery__stat"><i class="fas fa-eye" aria-label="Views"></i>${views.toLocaleString()}</p>
+              <p class="gallery__stat"><i class="fas fa-download" aria-label="Downloads"></i>${downloads.toLocaleString()}</p>          
+            </div>
+          </a>
         </div>`;
-    })
+      }
+    )
     .join("");
 
   container.insertAdjacentHTML("beforeend", markup);
+
+  gallery.refresh();
 };
