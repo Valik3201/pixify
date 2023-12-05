@@ -337,22 +337,6 @@ template {
   box-sizing: border-box;
 }
 
-html,
-body,
-div,
-h1,
-h2,
-h3,
-p,
-ul,
-li,
-form,
-input,
-button {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: "Inter", sans-serif;
 }
@@ -387,6 +371,23 @@ body {
 }
 .flex-column {
   flex-direction: column;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: none;
+  background-color: #336aea;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+}
+#scrollToTopBtn:hover {
+  background-color: #164fd4;
 }
 
 .banner {

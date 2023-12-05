@@ -41,6 +41,12 @@ import "./loadMoreButton.js";
 import "./gallery.js";
 
 /**
+ * Importing functions for handling scroll-to-top functionality.
+ * @see module:scrollToTop
+ */
+import "./scrollToTop.js";
+
+/**
  * Importing Font Awesome icon functionality.
  * @see module:fontawesome
  */
