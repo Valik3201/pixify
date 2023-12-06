@@ -86,11 +86,13 @@ Large images are displayed using the SimpleLightbox library, which is integrated
 
 ### Page Scrolling
 
-Smooth page scrolling is implemented after each request and rendering of the next group of images using the specified hint code.
+Smooth page scrolling is implemented after each request and rendering of the next group of images.
 
 ### Infinite Scrolling
 
-In addition to the "Load more" button, the project allows infinite loading of images when scrolling the page.
+In addition to the "Load More" button, the project enables infinite loading of images when scrolling the page. 
+
+**Note: The "Load More" button is accessible during input search, while Infinite Scrolling is available for popular list searches.**
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
@@ -103,6 +105,8 @@ In addition to the "Load more" button, the project allows infinite loading of im
 * [Axios](https://axios-http.com/)
 * [SimpleLightbox](https://simplelightbox.com/)
 * [Notiflix](https://www.notiflix.com/)
+* [Font Awesome](https://fontawesome.com)
+* [lazySizes](https://afarkas.github.io/lazysizes/index.html)
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
@@ -158,19 +162,19 @@ Feel free to experiment with different search queries and enjoy discovering a va
   - [x] Research and Design
   - [x] Documentation
 
-- [ ] Development Phase:
-  - [ ] Frontend Development
-  - [ ] Integration with Pixabay API
-  - [ ] Image Cards and Pagination
+- [x] Development Phase:
+  - [x] Frontend Development
+  - [x] Integration with Pixabay API
+  - [x] Image Cards and Pagination
 
 - [ ] Documentation and Testing:
   - [ ] Documentation and Testing
 
 - [ ] Post-Launch and Ongoing Development:
-  - [ ] SimpleLightbox Integration
-  - [ ] Notifications and User Feedback
+  - [x] SimpleLightbox Integration
+  - [x] Notifications and User Feedback
   - [ ] Optimization and Performance
-  - [ ] Infinite Scrolling
+  - [x] Infinite Scrolling
 
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
