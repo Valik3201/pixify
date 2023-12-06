@@ -7,6 +7,23 @@
   box-sizing: border-box;
 }
 
+// Reset default margins and paddings for certain elements
+html,
+body,
+div,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+
 // Set base font family for the entire body
 body {
   font-family: $base-family;
@@ -54,7 +71,7 @@ body {
   background-color: $main-brand-color;
   color: white;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
   padding: 10px 15px;
   cursor: pointer;
   transition: background-color 0.2s ease-in;

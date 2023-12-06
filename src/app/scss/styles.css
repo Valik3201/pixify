@@ -337,6 +337,22 @@ template {
   box-sizing: border-box;
 }
 
+html,
+body,
+div,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
@@ -381,7 +397,7 @@ body {
   background-color: #336aea;
   color: white;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
   padding: 10px 15px;
   cursor: pointer;
   transition: background-color 0.2s ease-in;
