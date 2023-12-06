@@ -34,6 +34,9 @@ export const searchPixabayImages = async (query, page, perPage) => {
       per_page: perPage,
     };
 
+    // Logging the current page for debugging purposes
+    console.log("Current page:", page);
+
     // Logging the constructed URL for debugging purposes
     console.log("Search URL:", `${API_URL}?${new URLSearchParams(params)}`);
 

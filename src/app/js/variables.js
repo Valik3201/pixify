@@ -57,7 +57,6 @@ export let perPage = 40;
  */
 export function incrementPage() {
   page += 1;
-  console.log("Page:", page);
 }
 
 /**

@@ -27,7 +27,10 @@ const handleSearchListItemClick = async (event) => {
     searchInput.value = selectedQuery;
 
     // Perform Pixabay image search and get the total number of hits
-    const totalHits = await searchAndRenderPixabayImages(selectedQuery);
+    const totalHits = await searchAndRenderPixabayImages(
+      selectedQuery,
+      "scroll"
+    );
 
     // Update the UI with information about the search results
     updateResultsInfo(selectedQuery, totalHits);
