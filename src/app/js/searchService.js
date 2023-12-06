@@ -78,9 +78,6 @@ export const searchAndRenderPixabayImages = async (
   loadMethod = "button"
 ) => {
   try {
-    // Set the selected query for reference.
-    selectedQuery = query;
-
     // Display loading dots while fetching data.
     Loading.dots();
 
