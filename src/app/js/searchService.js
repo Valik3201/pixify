@@ -65,16 +65,6 @@ export const updateResultsInfo = (query, totalHits) => {
 };
 
 /**
- * Flag indicating whether data is currently being loaded.
- *
- * @type {boolean}
- * @description
- *    - When true, it indicates that data is currently being loaded.
- *    - When false, it indicates that there is no ongoing data loading.
- */
-let isLoading = false;
-
-/**
  * Function to search Pixabay images based on a query and render the results.
  *
  * @async
@@ -93,7 +83,6 @@ export const searchAndRenderPixabayImages = async (
 
     // Display loading dots while fetching data.
     Loading.dots();
-    isLoading = true;
 
     // Fetch Pixabay images based on the query, page, and perPage parameters.
     const { totalHits, hits } = await searchPixabayImages(query, page, perPage);
@@ -162,9 +151,8 @@ export const searchAndRenderPixabayImages = async (
     // Return 0 when an error occurs.
     return 0;
   } finally {
-    // Remove loading indicators and set isLoading to false.
+    // Remove loading indicators
     Loading.remove();
-    isLoading = false;
   }
 };
 
