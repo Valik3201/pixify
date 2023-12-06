@@ -8,7 +8,7 @@
     <img alt="logo" src="https://github.com/Valik3201/goit-js-hw-11/blob/a16857efa0822a5285552a29ca9b8a0e7ac7549d/src/app/assets/logo.svg" width="400"
   </picture>
     <h2>
-      HTTP Requests, REST API, CRUD, Pagination, and async/await
+      HTTP Requests, REST API, pagination, and async/await
     </h2>
   </div>
 </a>
