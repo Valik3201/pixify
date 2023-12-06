@@ -10,7 +10,7 @@
   </div>
 </a>
     
-<h2>
+<h2 align="center">
   HTTP Requests, REST API, pagination, and async/await
 </h2>
     
