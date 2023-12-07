@@ -50,7 +50,7 @@ export let page = 1;
  * Number of items to display per page.
  * @type {number}
  */
-export let perPage = 40;
+export let perPage = 15;
 
 /**
  * Increment the current page number for pagination.
