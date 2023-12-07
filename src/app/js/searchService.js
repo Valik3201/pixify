@@ -1,5 +1,7 @@
+// Importing functions from the "pixabay.js" module
 import { searchPixabayImages, renderPixabayImages } from "./pixabay.js";
 
+// Importing variables and constants from the "variables.js" module
 import {
   searchInput,
   galleryContainer,
@@ -11,6 +13,10 @@ import {
   incrementPage,
 } from "./variables.js";
 
+// Importing the intersectionObserver from the "popularSearch.js" module
+import { intersectionObserver } from "./popularSearch.js";
+
+// Importing Notiflix Notify and Loading modules for notifications and loading indicators
 import { Notify } from "notiflix/build/notiflix-notify-aio";
 import { Loading } from "notiflix/build/notiflix-loading-aio";
 
@@ -65,18 +71,12 @@ export const updateResultsInfo = (query, totalHits) => {
 };
 
 /**
- * Function to search Pixabay images based on a query and render the results.
+ * Search and render Pixabay images based on the provided query.
  *
- * @async
- * @function
- * @param {string} query - The search query for Pixabay images.
- * @param {string} [loadMethod="button"] - The method used to load more images ("button" or "scroll").
- * @returns {Promise<number>} - The total number of hits (matching images).
+ * @param {string} query - The search query.
+ * @returns {Promise<number>} - The total number of hits.
  */
-export const searchAndRenderPixabayImages = async (
-  query,
-  loadMethod = "button"
-) => {
+export const searchAndRenderPixabayImages = async (query) => {
   try {
     // Display loading dots while fetching data.
     Loading.dots();
@@ -89,52 +89,20 @@ export const searchAndRenderPixabayImages = async (
 
     // Display messages based on search results.
     if (hits.length === 0) {
+      intersectionObserver.disconnect();
       Notify.info(
         "Sorry, there are no images matching your search query. Please try again."
       );
     } else if (hits.length < perPage && page !== 1) {
+      intersectionObserver.disconnect();
       Notify.info("We're sorry, but you've reached the end of search results.");
     }
 
-    // Handle loading more images based on the specified method.
-    if (loadMethod === "button") {
-      // Show or hide the load more button based on the number of hits.
-      loadMoreButton.style.display = hits.length >= perPage ? "block" : "none";
+    // Show or hide the load more button based on the number of hits.
+    loadMoreButton.style.display = hits.length >= perPage ? "block" : "none";
 
-      // Increment the page for the next search.
-      incrementPage();
-    } else if (loadMethod === "scroll" && hits.length < totalHits) {
-      // Calculate the total number of pages based on total hits and perPage.
-      const totalPages = Math.ceil(totalHits / perPage);
-
-      // Define a scroll handler to load more images when scrolling to the bottom.
-      const scrollHandler = async () => {
-        const isBottom =
-          window.innerHeight + window.scrollY + 500 >=
-          document.body.offsetHeight;
-
-        if (isBottom) {
-          if (page + 1 <= totalPages) {
-            // Increment the page and perform a new search for scrolling.
-            incrementPage();
-            await searchAndRenderPixabayImages(query, "scroll");
-          }
-
-          // Remove the scroll event listener after loading more images.
-          window.removeEventListener("scroll", scrollHandler);
-        }
-      };
-
-      // Add the scroll event listener to trigger the scrollHandler.
-      window.addEventListener("scroll", scrollHandler);
-
-      // Display a message if the user has reached the end of search results.
-      if (page === totalPages) {
-        Notify.info(
-          "We're sorry, but you've reached the end of search results."
-        );
-      }
-    }
+    // Increment the page for the next search.
+    incrementPage();
 
     // Return the total number of hits.
     return totalHits;

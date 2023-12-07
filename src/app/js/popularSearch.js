@@ -1,13 +1,35 @@
+// Importing variables from the "variables.js" module
 import { searchList, searchInput, resetPage } from "./variables.js";
 
+// Importing functions from the "searchService.js" module
 import {
   updateResultsInfo,
   searchAndRenderPixabayImages,
   clearGallery,
+  getSearchQuery,
 } from "./searchService.js";
 
+// Creating a new IntersectionObserver instance for lazy loading images
+export const intersectionObserver = new IntersectionObserver(
+  /**
+   * Handles the intersection changes for lazy loading images.
+   *
+   * @param {IntersectionObserverEntry[]} entries - An array of intersection entries.
+   */
+  async (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Retrieve the search query and trigger Pixabay image search
+        const selectedQuery = getSearchQuery();
+        searchAndRenderPixabayImages(selectedQuery);
+      }
+    });
+  },
+  { threshold: 0.5 } // Adjust the threshold as needed
+);
+
 /**
- * Handle the click event on a search list item.
+ * Handles the click event on a search list item.
  *
  * @param {Event} event - The click event on the search list.
  */
@@ -27,13 +49,16 @@ const handleSearchListItemClick = async (event) => {
     searchInput.value = selectedQuery;
 
     // Perform Pixabay image search and get the total number of hits
-    const totalHits = await searchAndRenderPixabayImages(
-      selectedQuery,
-      "scroll"
-    );
+    const totalHits = await searchAndRenderPixabayImages(selectedQuery);
 
     // Update the UI with information about the search results
     updateResultsInfo(selectedQuery, totalHits);
+
+    // Add the footer element as the target for intersection observation
+    const targetElement = document.querySelector("footer.footer");
+
+    // Start observing the footer element for intersection changes
+    intersectionObserver.observe(targetElement);
   }
 };
 
