@@ -63,7 +63,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!--[![Name ScreenShot][screenshot]](https://example.com)-->
+[![screenshot](https://github.com/Valik3201/goit-js-hw-11/blob/main/src/app/assets/screenshot.png)](https://github.com/Valik3201/goit-js-hw-11/blob/main/src/app/assets/screenshot.png)
 
 **Pixify - Image Search** is a web application that allows users to search and display images using the Pixabay API. The project includes features such as HTTP requests, image cards, pagination, SimpleLightbox library integration, smooth page scrolling, and even infinite scrolling.
 
