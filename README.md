@@ -67,7 +67,8 @@
 
 **Pixify - Image Search** is a web application that allows users to search and display images using the Pixabay API. The project includes features such as HTTP requests, image cards, pagination, SimpleLightbox library integration, smooth page scrolling, and even infinite scrolling.
 
-**Note: The project is set up for automatic deployment to GitHub Pages using GitHub Actions by JamesIves ([GitHub Pages Deployment Action](https://github.com/marketplace/actions/deploy-to-github-pages)). The deployment action is configured to push production-ready code into the `gh-pages` branch.**
+> [!NOTE]\
+> The project is set up for automatic deployment to GitHub Pages using GitHub Actions by JamesIves ([GitHub Pages Deployment Action](https://github.com/marketplace/actions/deploy-to-github-pages)). The deployment action is configured to push production-ready code into the `gh-pages` branch.
 
 ### HTTP Requests
 
