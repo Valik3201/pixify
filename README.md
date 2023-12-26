@@ -169,13 +169,13 @@ Feel free to experiment with different search queries and enjoy discovering a va
   - [x] Integration with Pixabay API
   - [x] Image Cards and Pagination
 
-- [ ] Documentation and Testing:
-  - [ ] Documentation and Testing
+- [x] Documentation and Testing:
+  - [x] Documentation and Testing
 
-- [ ] Post-Launch and Ongoing Development:
+- [x] Post-Launch and Ongoing Development:
   - [x] SimpleLightbox Integration
   - [x] Notifications and User Feedback
-  - [ ] Optimization and Performance
+  - [x] Optimization and Performance
   - [x] Infinite Scrolling
 
 
@@ -204,9 +204,8 @@ Contributions are welcome! If you have suggestions or improvements, feel free to
 <!-- CONTACT -->
 ## Contact
 
-**Valentyn Chernetskyi** - @valik3201 - valik3201@gmail.com
-
-Project Link: https://github.com/Valik3201/goit-js-hw-11
+[![Gmail Badge](https://img.shields.io/badge/Gmail-EA4335?logo=gmail&logoColor=fff&style=flat)](mailto:valik3201@gmail.com)
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=fff&style=flat)](https://www.linkedin.com/in/valentynchernetskyi/)
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
