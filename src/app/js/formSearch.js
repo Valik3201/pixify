@@ -7,6 +7,8 @@ import {
   clearGallery,
 } from "./searchService.js";
 
+import { intersectionObserver } from "./popularSearch.js";
+
 /**
  * Handle the submission of the search form.
  *
@@ -26,11 +28,13 @@ const handleSearchFormSubmit = async (event) => {
   // If the search query is not empty, perform Pixabay image search and render the results
   if (searchQuery !== "") {
     // Perform Pixabay image search and get the total number of hits
-    const totalHits = await searchAndRenderPixabayImages(searchQuery);
+    const totalHits = await searchAndRenderPixabayImages(searchQuery, "form");
 
     // Update the UI with information about the search results
     updateResultsInfo(searchQuery, totalHits);
   }
+
+  intersectionObserver.disconnect();
 };
 
 // Add an event listener to the search form for form submission handling

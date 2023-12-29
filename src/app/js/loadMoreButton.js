@@ -18,7 +18,7 @@ const handleLoadMoreButtonClick = async () => {
   // If the search query is not empty, perform Pixabay image search and render more results
   if (searchQuery !== "") {
     // Perform Pixabay image search and render additional results
-    await searchAndRenderPixabayImages(searchQuery);
+    await searchAndRenderPixabayImages(searchQuery, "form");
   }
 };
 

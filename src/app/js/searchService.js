@@ -76,7 +76,7 @@ export const updateResultsInfo = (query, totalHits) => {
  * @param {string} query - The search query.
  * @returns {Promise<number>} - The total number of hits.
  */
-export const searchAndRenderPixabayImages = async (query) => {
+export const searchAndRenderPixabayImages = async (query, typeSearch) => {
   try {
     // Display loading dots while fetching data.
     Loading.dots();
@@ -98,8 +98,12 @@ export const searchAndRenderPixabayImages = async (query) => {
       Notify.info("We're sorry, but you've reached the end of search results.");
     }
 
-    // Show or hide the load more button based on the number of hits.
-    loadMoreButton.style.display = hits.length >= perPage ? "block" : "none";
+    if (typeSearch === "form") {
+      // Show or hide the load more button based on the number of hits.
+      loadMoreButton.style.display = hits.length >= perPage ? "block" : "none";
+    } else {
+      loadMoreButton.style.display = "none";
+    }
 
     // Increment the page for the next search.
     incrementPage();
