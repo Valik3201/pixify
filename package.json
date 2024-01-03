@@ -24,7 +24,7 @@
     "axios": "^1.6.3",
     "lazysizes": "^5.3.2",
     "normalize-scss": "^8.0.0",
-    "notiflix": "^3.2.6",
+    "notiflix": "^3.2.7",
     "simplelightbox": "^2.14.2"
   },
   "devDependencies": {
