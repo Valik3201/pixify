@@ -128,7 +128,7 @@ Make sure you have the following installed:
 
 1. Clone the repository
    ```sh
-   git clone https://github.com/Valik3201/goit-js-hw-11.git
+   git clone https://github.com/Valik3201/pixify.git
 2. Navigate to the project directory
    ```sh
     cd goit-js-hw-11
