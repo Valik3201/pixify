@@ -1,21 +1,21 @@
 {
-  "name": "goit-js-hw-11",
+  "name": "pixify",
   "version": "1.0.0",
   "description": "Pixify - Image Search",
-  "homepage": "https://valik3201.github.io/goit-js-hw-11",
+  "homepage": "https://valik3201.github.io/pixify",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-11/"
+    "build": "parcel build src/*.html --public-url /pixify/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Valik3201/goit-js-hw-11.git"
+    "url": "git+https://github.com/Valik3201/pixify.git"
   },
   "keywords": [],
   "author": "Valentyn Chernetskyi <valik3201@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Valik3201/goit-js-hw-11/issues"
+    "url": "https://github.com/Valik3201/pixify/issues"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.1",
